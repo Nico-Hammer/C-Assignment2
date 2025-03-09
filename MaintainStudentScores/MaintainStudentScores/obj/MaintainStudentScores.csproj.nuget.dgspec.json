@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {}
+    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C-Assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {
+    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C-Assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
+        "projectUniqueName": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C-Assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
         "projectName": "MaintainStudentScores",
-        "projectPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
+        "projectPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C-Assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
         "packagesPath": "C:\\Users\\nicoh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\obj\\",
+        "outputPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C-Assignment2\\MaintainStudentScores\\MaintainStudentScores\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\nicoh\\AppData\\Roaming\\NuGet\\NuGet.Config"

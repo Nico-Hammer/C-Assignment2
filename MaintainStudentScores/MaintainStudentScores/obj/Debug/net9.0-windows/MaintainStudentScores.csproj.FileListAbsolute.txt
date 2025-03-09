@@ -1,0 +1,15 @@
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\bin\Debug\net9.0-windows\MaintainStudentScores.exe
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\bin\Debug\net9.0-windows\MaintainStudentScores.deps.json
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\bin\Debug\net9.0-windows\MaintainStudentScores.runtimeconfig.json
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\bin\Debug\net9.0-windows\MaintainStudentScores.dll
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\bin\Debug\net9.0-windows\MaintainStudentScores.pdb
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.AssemblyInfoInputs.cache
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.AssemblyInfo.cs
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.csproj.CoreCompileInputs.cache
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.sourcelink.json
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.dll
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\refint\MaintainStudentScores.dll
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.pdb
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\MaintainStudentScores.genruntimeconfig.cache
+C:\Users\nicoh\OneDrive\Desktop\C#.NET\C-Assignment2\MaintainStudentScores\MaintainStudentScores\obj\Debug\net9.0-windows\ref\MaintainStudentScores.dll
