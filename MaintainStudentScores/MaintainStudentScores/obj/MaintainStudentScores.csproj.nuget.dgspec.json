@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
+        "projectName": "MaintainStudentScores",
+        "projectPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\MaintainStudentScores.csproj",
+        "packagesPath": "C:\\Users\\nicoh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nicoh\\OneDrive\\Desktop\\C#.NET\\C#assignment2\\MaintainStudentScores\\MaintainStudentScores\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nicoh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0-windows"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0-windows7.0": {
+            "targetAlias": "net9.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0-windows7.0": {
+          "targetAlias": "net9.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
