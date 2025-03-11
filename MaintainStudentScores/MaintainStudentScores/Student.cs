@@ -2,7 +2,7 @@
 
 public class Student
 {
-    string firstName { get; set; }
-    string lastName { get; set; }
-    List<Decimal> score = new List<Decimal>();
+    public string firstName { get; set; }
+    public string lastName { get; set; }
+    public List<Decimal> score {get; set;}
 }
