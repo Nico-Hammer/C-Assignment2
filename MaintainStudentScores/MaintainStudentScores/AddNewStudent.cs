@@ -6,4 +6,9 @@ public partial class AddNewStudent : Form
     {
         InitializeComponent();
     }
+
+    private void btnNewCancel_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
 }

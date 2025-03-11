@@ -12,6 +12,9 @@
       <Compile Update="AddNewStudent.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="UpdateStudent.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
 </Project>
