@@ -30,7 +30,6 @@ partial class Form1
     private void InitializeComponent()
     {
         lblStudents = new System.Windows.Forms.Label();
-        rtxtStudents = new System.Windows.Forms.RichTextBox();
         btnAddNew = new System.Windows.Forms.Button();
         btnDeleteStudent = new System.Windows.Forms.Button();
         btnUpdateStudent = new System.Windows.Forms.Button();
@@ -41,6 +40,7 @@ partial class Form1
         lblCount = new System.Windows.Forms.Label();
         txtScoreTotal = new System.Windows.Forms.TextBox();
         lblTotal = new System.Windows.Forms.Label();
+        listBox1 = new System.Windows.Forms.ListBox();
         SuspendLayout();
         // 
         // lblStudents
@@ -51,17 +51,9 @@ partial class Form1
         lblStudents.TabIndex = 0;
         lblStudents.Text = "Students";
         // 
-        // rtxtStudents
-        // 
-        rtxtStudents.Location = new System.Drawing.Point(13, 37);
-        rtxtStudents.Name = "rtxtStudents";
-        rtxtStudents.Size = new System.Drawing.Size(264, 81);
-        rtxtStudents.TabIndex = 1;
-        rtxtStudents.Text = "";
-        // 
         // btnAddNew
         // 
-        btnAddNew.Location = new System.Drawing.Point(294, 37);
+        btnAddNew.Location = new System.Drawing.Point(294, 34);
         btnAddNew.Name = "btnAddNew";
         btnAddNew.Size = new System.Drawing.Size(75, 23);
         btnAddNew.TabIndex = 2;
@@ -70,7 +62,7 @@ partial class Form1
         // 
         // btnDeleteStudent
         // 
-        btnDeleteStudent.Location = new System.Drawing.Point(294, 95);
+        btnDeleteStudent.Location = new System.Drawing.Point(294, 90);
         btnDeleteStudent.Name = "btnDeleteStudent";
         btnDeleteStudent.Size = new System.Drawing.Size(75, 23);
         btnDeleteStudent.TabIndex = 3;
@@ -79,7 +71,7 @@ partial class Form1
         // 
         // btnUpdateStudent
         // 
-        btnUpdateStudent.Location = new System.Drawing.Point(294, 66);
+        btnUpdateStudent.Location = new System.Drawing.Point(294, 63);
         btnUpdateStudent.Name = "btnUpdateStudent";
         btnUpdateStudent.Size = new System.Drawing.Size(75, 23);
         btnUpdateStudent.TabIndex = 4;
@@ -94,6 +86,7 @@ partial class Form1
         btnExit.TabIndex = 5;
         btnExit.Text = "E&xit";
         btnExit.UseVisualStyleBackColor = true;
+        btnExit.Click += btnExit_Click;
         // 
         // txtStudentAVG
         // 
@@ -143,11 +136,20 @@ partial class Form1
         lblTotal.TabIndex = 11;
         lblTotal.Text = "Score Total:";
         // 
+        // listBox1
+        // 
+        listBox1.FormattingEnabled = true;
+        listBox1.Location = new System.Drawing.Point(13, 34);
+        listBox1.Name = "listBox1";
+        listBox1.Size = new System.Drawing.Size(264, 79);
+        listBox1.TabIndex = 12;
+        // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(378, 227);
+        Controls.Add(listBox1);
         Controls.Add(lblTotal);
         Controls.Add(txtScoreTotal);
         Controls.Add(lblCount);
@@ -158,15 +160,15 @@ partial class Form1
         Controls.Add(btnUpdateStudent);
         Controls.Add(btnDeleteStudent);
         Controls.Add(btnAddNew);
-        Controls.Add(rtxtStudents);
         Controls.Add(lblStudents);
         Text = "Student Scores";
         ResumeLayout(false);
         PerformLayout();
     }
 
+    private System.Windows.Forms.ListBox listBox1;
+
     private System.Windows.Forms.Label lblStudents;
-    private System.Windows.Forms.RichTextBox rtxtStudents;
     private System.Windows.Forms.Button btnAddNew;
     private System.Windows.Forms.Button btnDeleteStudent;
     private System.Windows.Forms.Button btnUpdateStudent;
