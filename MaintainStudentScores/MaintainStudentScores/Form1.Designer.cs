@@ -40,7 +40,7 @@ partial class Form1
         lblCount = new System.Windows.Forms.Label();
         txtScoreTotal = new System.Windows.Forms.TextBox();
         lblTotal = new System.Windows.Forms.Label();
-        listBox1 = new System.Windows.Forms.ListBox();
+        lstStudents = new System.Windows.Forms.ListBox();
         SuspendLayout();
         // 
         // lblStudents
@@ -78,6 +78,7 @@ partial class Form1
         btnUpdateStudent.TabIndex = 4;
         btnUpdateStudent.Text = "&Update";
         btnUpdateStudent.UseVisualStyleBackColor = true;
+        btnUpdateStudent.Click += btnUpdateStudent_Click;
         // 
         // btnExit
         // 
@@ -137,20 +138,20 @@ partial class Form1
         lblTotal.TabIndex = 11;
         lblTotal.Text = "Score Total:";
         // 
-        // listBox1
+        // lstStudents
         // 
-        listBox1.FormattingEnabled = true;
-        listBox1.Location = new System.Drawing.Point(13, 34);
-        listBox1.Name = "listBox1";
-        listBox1.Size = new System.Drawing.Size(264, 79);
-        listBox1.TabIndex = 12;
+        lstStudents.FormattingEnabled = true;
+        lstStudents.Location = new System.Drawing.Point(13, 34);
+        lstStudents.Name = "lstStudents";
+        lstStudents.Size = new System.Drawing.Size(264, 79);
+        lstStudents.TabIndex = 12;
         // 
         // Form1
         // 
         AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
         AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         ClientSize = new System.Drawing.Size(378, 227);
-        Controls.Add(listBox1);
+        Controls.Add(lstStudents);
         Controls.Add(lblTotal);
         Controls.Add(txtScoreTotal);
         Controls.Add(lblCount);
@@ -167,7 +168,7 @@ partial class Form1
         PerformLayout();
     }
 
-    private System.Windows.Forms.ListBox listBox1;
+    private System.Windows.Forms.ListBox lstStudents;
 
     private System.Windows.Forms.Label lblStudents;
     private System.Windows.Forms.Button btnAddNew;

@@ -16,4 +16,10 @@ public partial class Form1 : Form
     {
         this.Close();
     }
+
+    private void btnUpdateStudent_Click(object sender, EventArgs e)
+    {
+        UpdateStudent updateStudent = new UpdateStudent();
+        updateStudent.ShowDialog();
+    }
 }
