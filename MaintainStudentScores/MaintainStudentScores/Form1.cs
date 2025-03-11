@@ -5,6 +5,9 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
+        Student j = new Student();
+        Student D = new Student();
+        Student A = new Student();
     }
 
     private void btnAddNew_Click(object sender, EventArgs e)
