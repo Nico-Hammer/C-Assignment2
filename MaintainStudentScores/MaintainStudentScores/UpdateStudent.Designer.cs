@@ -119,6 +119,7 @@ partial class UpdateStudent
         btnUpdateCancel.TabIndex = 8;
         btnUpdateCancel.Text = "&Cancel";
         btnUpdateCancel.UseVisualStyleBackColor = true;
+        btnUpdateCancel.Click += btnUpdateCancel_Click;
         // 
         // btnUpdateOk
         // 
