@@ -59,6 +59,7 @@ partial class Form1
         btnAddNew.TabIndex = 2;
         btnAddNew.Text = "&Add New";
         btnAddNew.UseVisualStyleBackColor = true;
+        btnAddNew.Click += btnAddNew_Click;
         // 
         // btnDeleteStudent
         // 

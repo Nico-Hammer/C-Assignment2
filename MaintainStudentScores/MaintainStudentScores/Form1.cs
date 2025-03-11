@@ -7,6 +7,11 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
+    private void btnAddNew_Click(object sender, EventArgs e)
+    {
+        AddNewStudent f= new AddNewStudent();
+        f.ShowDialog();
+    }
     private void btnExit_Click(object sender, EventArgs e)
     {
         this.Close();
