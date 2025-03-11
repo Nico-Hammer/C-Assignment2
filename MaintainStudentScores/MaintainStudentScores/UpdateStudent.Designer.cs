@@ -83,6 +83,7 @@ partial class UpdateStudent
         btnUpdateAdd.TabIndex = 4;
         btnUpdateAdd.Text = "&Add";
         btnUpdateAdd.UseVisualStyleBackColor = true;
+        btnUpdateAdd.Click += btnUpdateAdd_Click;
         // 
         // btnUpdateupdate
         // 
@@ -92,6 +93,7 @@ partial class UpdateStudent
         btnUpdateupdate.TabIndex = 5;
         btnUpdateupdate.Text = "&Update";
         btnUpdateupdate.UseVisualStyleBackColor = true;
+        btnUpdateupdate.Click += btnUpdateupdate_Click;
         // 
         // btnUpdateRemove
         // 

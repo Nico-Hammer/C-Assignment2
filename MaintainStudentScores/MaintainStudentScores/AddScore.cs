@@ -6,4 +6,9 @@ public partial class AddScore : Form
     {
         InitializeComponent();
     }
+
+    private void btnAddCancel_Click(object sender, EventArgs e)
+    {
+        this.Close();
+    }
 }
