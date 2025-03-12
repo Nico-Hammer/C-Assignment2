@@ -7,21 +7,21 @@ public partial class Form1 : Form
         InitializeComponent();
         List<Student> samplestudents = new List<Student>
         {
-            new() {firstName = "Joel",lastName = "Murach",score = [97,91,83]},
-            new() {firstName = "Doug",lastName = "Lowe",score = [99,93,97]},
-            new() {firstName = "Anne",lastName = "Boehm",score = [100,100,100]},
+            new() { firstName = "Joel", lastName = "Murach", score = new List<Decimal> { 97, 91, 83 } },
+            new() { firstName = "Doug", lastName = "Lowe", score = new List<Decimal> { 99, 93, 97 } },
+            new() { firstName = "Anne", lastName = "Boehm", score = new List<Decimal> { 100, 100, 100 } },
         };
-        
+
         foreach (Student s in samplestudents)
         {
             string studentscoreinfo = "";
-            foreach (Student sc in samplestudents)
+            // Iterate over only the current student's scores
+            foreach (Decimal score in s.score)
             {
-                for (int h = 0; h < samplestudents.Count; h++)
-                {
-                    studentscoreinfo += $"{sc.score[h].ToString()}|";
-                }
+                studentscoreinfo += $"{score}|";
             }
+
+            // Add student info and their respective scores to the list box
             string fullstudentinfo = $"{s.firstName} {s.lastName}|{studentscoreinfo}";
             lstStudents.Items.Add(fullstudentinfo);
         }
