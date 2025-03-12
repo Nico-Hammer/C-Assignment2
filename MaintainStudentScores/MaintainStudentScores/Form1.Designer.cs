@@ -69,6 +69,7 @@ partial class Form1
         btnDeleteStudent.TabIndex = 3;
         btnDeleteStudent.Text = "&Delete";
         btnDeleteStudent.UseVisualStyleBackColor = true;
+        btnDeleteStudent.Click += btnDeleteStudent_Click;
         // 
         // btnUpdateStudent
         // 
