@@ -53,7 +53,7 @@ public partial class Form1 : Form
                                                 .Where(s => !string.IsNullOrWhiteSpace(s))
                                                 .Select(decimal.Parse).ToList();
         
-        txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString();;
+        txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString();
         txtCount.Text = scores.Count.ToString();
         txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString();
     }
