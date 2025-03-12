@@ -146,6 +146,7 @@ partial class Form1
         lstStudents.Name = "lstStudents";
         lstStudents.Size = new System.Drawing.Size(264, 79);
         lstStudents.TabIndex = 12;
+        lstStudents.SelectedIndexChanged += lstStudents_SelectedIndexChanged;
         // 
         // Form1
         // 

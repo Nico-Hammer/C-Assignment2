@@ -42,6 +42,19 @@ public partial class Form1 : Form
     }
     private void btnExit_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
+    }
+
+    private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        string selectedStudent = lstStudents.SelectedItem.ToString();
+        var scores = selectedStudent.Split("|")
+                                                .Skip(1)
+                                                .Where(s => !string.IsNullOrWhiteSpace(s))
+                                                .Select(decimal.Parse).ToList();
+        
+        txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString();;
+        txtCount.Text = scores.Count.ToString();
+        txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString();
     }
 }
