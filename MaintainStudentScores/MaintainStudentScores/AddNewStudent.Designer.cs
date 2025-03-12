@@ -97,6 +97,7 @@ partial class AddNewStudent
         btnNewAddScore.TabIndex = 6;
         btnNewAddScore.Text = "&Add Score";
         btnNewAddScore.UseVisualStyleBackColor = true;
+        btnNewAddScore.Click += btnNewAddScore_Click;
         // 
         // btnNewClearScores
         // 
@@ -106,6 +107,7 @@ partial class AddNewStudent
         btnNewClearScores.TabIndex = 7;
         btnNewClearScores.Text = "Clear &Scores";
         btnNewClearScores.UseVisualStyleBackColor = true;
+        btnNewClearScores.Click += btnNewClearScores_Click;
         // 
         // btnNewCancel
         // 
@@ -125,6 +127,7 @@ partial class AddNewStudent
         btnNewOk.TabIndex = 9;
         btnNewOk.Text = "&Ok";
         btnNewOk.UseVisualStyleBackColor = true;
+        btnNewOk.Click += btnNewOk_Click;
         // 
         // AddNewStudent
         // 

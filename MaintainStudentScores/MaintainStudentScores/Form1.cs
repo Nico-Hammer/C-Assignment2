@@ -1,19 +1,17 @@
 namespace MaintainStudentScores;
 public partial class Form1 : Form
 {
+    private List<Student> students = new List<Student>();
     public Form1()
     {
         InitializeComponent();
-        List<Student> students = new List<Student>
-        {
-            new() { firstName = "Joel", lastName = "Murach", score = new List<Decimal> { 97, 91, 83 } },
-            new() { firstName = "Doug", lastName = "Lowe", score = new List<Decimal> { 99, 93, 97 } },
-            new() { firstName = "Anne", lastName = "Boehm", score = new List<Decimal> { 100, 100, 100 } },
-        };
-        printStudents(students);
+        students.Add(new Student { firstName = "Joel", lastName = "Murach", score = new List<decimal> { 97, 91, 83 } });
+        students.Add(new Student { firstName = "Doug", lastName = "Lowe", score = new List<decimal> { 99, 93, 97 } });
+        students.Add(new Student { firstName = "Anne", lastName = "Boehm", score = new List<decimal> { 100, 100, 100 } });
+        PrintStudents(students);
     }
 
-    private void printStudents(List<Student> students)
+    private void PrintStudents(List<Student> students)
     {
         foreach (Student s in students)
         {
@@ -26,16 +24,24 @@ public partial class Form1 : Form
             lstStudents.Items.Add(fullstudentinfo);
         }
     }
+    
     private void btnAddNew_Click(object sender, EventArgs e)
     {
-        AddNewStudent newStudent= new AddNewStudent();
-        newStudent.ShowDialog();
+        AddNewStudent newStudentForm = new AddNewStudent();
+        if (newStudentForm.ShowDialog() == DialogResult.OK)
+        {
+            Student newStudent = newStudentForm.NewStudent;
+            students.Add(newStudent);
+            PrintStudents(students);
+        }
     }
+    
     private void btnUpdateStudent_Click(object sender, EventArgs e)
     {
         UpdateStudent updateStudent = new UpdateStudent();
         updateStudent.ShowDialog();
     }
+    
     private void btnDeleteStudent_Click(object sender, EventArgs e)
     {
         lstStudents.Items.Remove(lstStudents.Items[lstStudents.SelectedIndex]);
@@ -43,6 +49,19 @@ public partial class Form1 : Form
     
     private void btnExit_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
+    }
+
+    private void lstStudents_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        string selectedStudent = lstStudents.SelectedItem.ToString();
+        var scores = selectedStudent.Split("|")
+                                                .Skip(1)
+                                                .Where(s => !string.IsNullOrWhiteSpace(s))
+                                                .Select(decimal.Parse).ToList();
+        
+        txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString();
+        txtCount.Text = scores.Count.ToString();
+        txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString();
     }
 }
