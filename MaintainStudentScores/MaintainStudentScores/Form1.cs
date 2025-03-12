@@ -40,6 +40,7 @@ public partial class Form1 : Form
     {
         lstStudents.Items.Remove(lstStudents.Items[lstStudents.SelectedIndex]);
     }
+    
     private void btnExit_Click(object sender, EventArgs e)
     {
         this.Close();
