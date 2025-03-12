@@ -1,7 +1,12 @@
-﻿namespace MaintainStudentScores;
+﻿using System.ComponentModel;
+
+namespace MaintainStudentScores;
 
 public partial class AddNewStudent : Form
 {
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    public Student NewStudent { get; private set; }
+
     public AddNewStudent()
     {
         InitializeComponent();
@@ -14,7 +19,38 @@ public partial class AddNewStudent : Form
 
     private void btnNewOk_Click(object sender, EventArgs e)
     {
-        string name = txtNewName.Text;
+        string[] nameParts = txtNewName.Text.Split(' ');
+        if (nameParts.Length < 2)
+        {
+            MessageBox.Show("Please enter a full name (First and Last).", 
+                    "Name Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        string firstName = nameParts[0];
+        string lastName = string.Join(" ", nameParts.Skip(1));
+        
+        List<decimal> scores;
+        try
+        {
+            scores = txtNewScores.Text
+                .Split(' ')
+                .Where(s => !string.IsNullOrWhiteSpace(s))
+                .Select(decimal.Parse)
+                .ToList();
+        }
+        //since we're using this twice in this file, let's create a method to handle it
+        catch
+        {
+            MessageBox.Show("Please enter a valid numeric score between 0 and 100.",
+                "Invalid score input",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        NewStudent = new Student { firstName = firstName, lastName = lastName, score = scores };
+        DialogResult = DialogResult.OK;
+        Close();
     }
 
     private void btnNewAddScore_Click(object sender, EventArgs e)
