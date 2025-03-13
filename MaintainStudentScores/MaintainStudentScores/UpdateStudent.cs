@@ -34,12 +34,12 @@ public partial class UpdateStudent : Form
 
     private void btnUpdateupdate_Click(object sender, EventArgs e)
     {
-        UpdateScore updateScore = new UpdateScore();
-        updateScore.ShowDialog();
-    }
-
-    private void lstUpdateScores_SelectedIndexChanged(object sender, EventArgs e)
-    {
-        throw new System.NotImplementedException();
+        string selectedScore = lstUpdateScores.SelectedItem.ToString();
+        UpdateScore updateScoreForm = new UpdateScore(selectedScore);
+        
+        if (updateScoreForm.ShowDialog() == DialogResult.OK)
+        {
+            lstUpdateScores.Items[lstUpdateScores.SelectedIndex] = updateScoreForm.UpdatedStudentScore;
+        }
     }
 }

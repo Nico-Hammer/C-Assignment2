@@ -32,7 +32,7 @@ partial class UpdateScore
     private void InitializeComponent()
     {
         lblUScorescore = new System.Windows.Forms.Label();
-        txtUScorescore = new System.Windows.Forms.TextBox();
+        txtUScore = new System.Windows.Forms.TextBox();
         btnUScorecancel = new System.Windows.Forms.Button();
         btnUScoreupdate = new System.Windows.Forms.Button();
         SuspendLayout();
@@ -45,12 +45,12 @@ partial class UpdateScore
         lblUScorescore.TabIndex = 0;
         lblUScorescore.Text = "Score:";
         // 
-        // txtUScorescore
+        // txtUScore
         // 
-        txtUScorescore.Location = new System.Drawing.Point(92, 18);
-        txtUScorescore.Name = "txtUScorescore";
-        txtUScorescore.Size = new System.Drawing.Size(100, 23);
-        txtUScorescore.TabIndex = 1;
+        txtUScore.Location = new System.Drawing.Point(92, 18);
+        txtUScore.Name = "txtUScore";
+        txtUScore.Size = new System.Drawing.Size(100, 23);
+        txtUScore.TabIndex = 1;
         // 
         // btnUScorecancel
         // 
@@ -64,12 +64,13 @@ partial class UpdateScore
         // 
         // btnUScoreupdate
         // 
-        btnUScoreupdate.Location = new System.Drawing.Point(36, 60);
+        btnUScoreupdate.Location = new System.Drawing.Point(29, 60);
         btnUScoreupdate.Name = "btnUScoreupdate";
         btnUScoreupdate.Size = new System.Drawing.Size(75, 23);
         btnUScoreupdate.TabIndex = 3;
         btnUScoreupdate.Text = "&Update";
         btnUScoreupdate.UseVisualStyleBackColor = true;
+        btnUScoreupdate.Click += btnUScoreupdate_Click;
         // 
         // UpdateScore
         // 
@@ -78,7 +79,7 @@ partial class UpdateScore
         ClientSize = new System.Drawing.Size(213, 103);
         Controls.Add(btnUScoreupdate);
         Controls.Add(btnUScorecancel);
-        Controls.Add(txtUScorescore);
+        Controls.Add(txtUScore);
         Controls.Add(lblUScorescore);
         Text = "UpdateScore";
         ResumeLayout(false);
@@ -86,7 +87,7 @@ partial class UpdateScore
     }
 
     private System.Windows.Forms.Label lblUScorescore;
-    private System.Windows.Forms.TextBox txtUScorescore;
+    private System.Windows.Forms.TextBox txtUScore;
     private System.Windows.Forms.Button btnUScorecancel;
     private System.Windows.Forms.Button btnUScoreupdate;
 

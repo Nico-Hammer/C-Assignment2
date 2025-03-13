@@ -109,7 +109,7 @@ public partial class Form1 : Form
         {
             string selectedStudent = lstStudents.SelectedItem.ToString(); // get the selected students information as a string
             var scores = selectedStudent.Split("|") // separate each score by a "|"
-                .Skip(1)
+                .Skip(1) // skip 1st part, in this case the name
                 .Where(s => !string.IsNullOrWhiteSpace(s)) // only care about the characters that aren't whitespace or null
                 .Select(decimal.Parse).ToList(); // make sure the score is a number then add it to a list
         

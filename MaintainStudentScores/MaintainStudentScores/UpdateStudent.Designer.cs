@@ -74,7 +74,6 @@ partial class UpdateStudent
         lstUpdateScores.Name = "lstUpdateScores";
         lstUpdateScores.Size = new System.Drawing.Size(189, 109);
         lstUpdateScores.TabIndex = 3;
-        lstUpdateScores.SelectedIndexChanged += lstUpdateScores_SelectedIndexChanged;
         // 
         // btnUpdateAdd
         // 
