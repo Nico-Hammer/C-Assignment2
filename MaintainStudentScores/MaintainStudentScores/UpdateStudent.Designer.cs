@@ -74,6 +74,7 @@ partial class UpdateStudent
         lstUpdateScores.Name = "lstUpdateScores";
         lstUpdateScores.Size = new System.Drawing.Size(189, 109);
         lstUpdateScores.TabIndex = 3;
+        lstUpdateScores.SelectedIndexChanged += lstUpdateScores_SelectedIndexChanged;
         // 
         // btnUpdateAdd
         // 
@@ -110,7 +111,7 @@ partial class UpdateStudent
         btnUpdateClear.Name = "btnUpdateClear";
         btnUpdateClear.Size = new System.Drawing.Size(99, 23);
         btnUpdateClear.TabIndex = 7;
-        btnUpdateClear.Text = "Clear &Score";
+        btnUpdateClear.Text = "Clear &Scores";
         btnUpdateClear.UseVisualStyleBackColor = true;
         // 
         // btnUpdateCancel

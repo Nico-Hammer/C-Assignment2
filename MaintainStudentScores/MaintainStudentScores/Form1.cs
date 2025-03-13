@@ -43,7 +43,31 @@ public partial class Form1 : Form
     
     private void btnUpdateStudent_Click(object sender, EventArgs e)
     {
-        UpdateStudent updateStudent = new UpdateStudent();
+        if (lstStudents.SelectedIndex == -1)
+        {
+            MessageBox.Show("Please select a student to update.", 
+                "Student not selected",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+        
+        string selectedStudent = lstStudents.SelectedItem.ToString();
+        var parts = selectedStudent.Split("|");
+
+        if (parts.Length < 2) return;
+
+        string[] nameParts = parts[0].Split(" ");
+        string firstName = nameParts[0];
+        string lastName = nameParts[1];
+    
+        var scores = parts.Skip(1)
+            .Where(s => !string.IsNullOrWhiteSpace(s))
+            .Select(decimal.Parse)
+            .ToList();
+
+        Student studentToUpdate = new Student(firstName, lastName, scores);
+    
+        UpdateStudent updateStudent = new UpdateStudent(studentToUpdate);
         updateStudent.ShowDialog();
     }
     
