@@ -26,7 +26,7 @@ public partial class AddNewStudent : Form
                     "Name Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
-
+        
         string firstName = nameParts[0];
         string lastName = string.Join(" ", nameParts.Skip(1));
         
@@ -47,8 +47,8 @@ public partial class AddNewStudent : Form
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
-
-        NewStudent = new Student { firstName = firstName, lastName = lastName, score = scores };
+        
+        NewStudent = new Student(firstName, lastName, scores);
         DialogResult = DialogResult.OK;
         Close();
     }

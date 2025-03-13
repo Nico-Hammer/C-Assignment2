@@ -5,9 +5,13 @@ public partial class Form1 : Form
     public Form1()
     {
         InitializeComponent();
-        students.Add(new Student { firstName = "Joel", lastName = "Murach", score = new List<decimal> { 97, 91, 83 } });
-        students.Add(new Student { firstName = "Doug", lastName = "Lowe", score = new List<decimal> { 99, 93, 97 } });
-        students.Add(new Student { firstName = "Anne", lastName = "Boehm", score = new List<decimal> { 100, 100, 100 } });
+    }
+
+    private void LoadSample()
+    {
+        students.Add(new Student("Joel", "Murach", [ 97, 91, 83 ]));
+        students.Add(new Student("Doug", "Lowe", [ 99, 93, 97 ]));
+        students.Add(new Student("Anne", "Boehm", [ 100, 100, 100 ]));
         PrintStudents(students);
     }
 
@@ -30,6 +34,7 @@ public partial class Form1 : Form
         AddNewStudent newStudentForm = new AddNewStudent();
         if (newStudentForm.ShowDialog() == DialogResult.OK)
         {
+            lstStudents.Items.Clear();
             Student newStudent = newStudentForm.NewStudent;
             students.Add(newStudent);
             PrintStudents(students);
@@ -63,5 +68,10 @@ public partial class Form1 : Form
         txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString();
         txtCount.Text = scores.Count.ToString();
         txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString();
+    }
+
+    private void Form1_Load(object sender, EventArgs e)
+    {
+        LoadSample();
     }
 }

@@ -166,6 +166,7 @@ partial class Form1
         Controls.Add(btnAddNew);
         Controls.Add(lblStudents);
         Text = "Student Scores";
+        Load += Form1_Load;
         ResumeLayout(false);
         PerformLayout();
     }
