@@ -1,7 +1,11 @@
-﻿namespace MaintainStudentScores;
+﻿using System.ComponentModel;
+
+namespace MaintainStudentScores;
 
 public partial class AddScore : Form
 {
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    public string AddStudentScore { get; private set; }
     public AddScore()
     {
         InitializeComponent();
@@ -9,6 +13,13 @@ public partial class AddScore : Form
 
     private void btnAddCancel_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
+    }
+
+    private void btnAddaddscore_Click(object sender, EventArgs e)
+    {
+        AddStudentScore = txtAddscore.Text;
+        DialogResult = DialogResult.OK;
+        Close();
     }
 }

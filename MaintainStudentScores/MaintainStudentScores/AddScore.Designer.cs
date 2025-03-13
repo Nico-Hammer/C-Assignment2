@@ -53,6 +53,7 @@ partial class AddScore
         btnAddaddscore.TabIndex = 1;
         btnAddaddscore.Text = "&Add";
         btnAddaddscore.UseVisualStyleBackColor = true;
+        btnAddaddscore.Click += btnAddaddscore_Click;
         // 
         // btnAddCancel
         // 

@@ -103,6 +103,7 @@ partial class UpdateStudent
         btnUpdateRemove.TabIndex = 6;
         btnUpdateRemove.Text = "&Remove";
         btnUpdateRemove.UseVisualStyleBackColor = true;
+        btnUpdateRemove.Click += btnUpdateRemove_Click;
         // 
         // btnUpdateClear
         // 
