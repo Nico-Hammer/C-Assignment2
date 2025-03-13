@@ -56,7 +56,7 @@ partial class AddNewStudent
         lblNewScore.Location = new System.Drawing.Point(32, 58);
         lblNewScore.Name = "lblNewScore";
         lblNewScore.Size = new System.Drawing.Size(100, 23);
-        lblNewScore.TabIndex = 1;
+        lblNewScore.TabIndex = 2;
         lblNewScore.Text = "Score:";
         // 
         // lblNewScores
@@ -64,7 +64,7 @@ partial class AddNewStudent
         lblNewScores.Location = new System.Drawing.Point(32, 97);
         lblNewScores.Name = "lblNewScores";
         lblNewScores.Size = new System.Drawing.Size(100, 23);
-        lblNewScores.TabIndex = 2;
+        lblNewScores.TabIndex = 5;
         lblNewScores.Text = "Scores:";
         // 
         // txtNewScores
@@ -73,28 +73,29 @@ partial class AddNewStudent
         txtNewScores.Name = "txtNewScores";
         txtNewScores.ReadOnly = true;
         txtNewScores.Size = new System.Drawing.Size(220, 23);
-        txtNewScores.TabIndex = 3;
+        txtNewScores.TabIndex = 6;
+        txtNewScores.TabStop = false;
         // 
         // txtNewScore
         // 
         txtNewScore.Location = new System.Drawing.Point(92, 58);
         txtNewScore.Name = "txtNewScore";
         txtNewScore.Size = new System.Drawing.Size(100, 23);
-        txtNewScore.TabIndex = 4;
+        txtNewScore.TabIndex = 3;
         // 
         // txtNewName
         // 
         txtNewName.Location = new System.Drawing.Point(92, 20);
         txtNewName.Name = "txtNewName";
         txtNewName.Size = new System.Drawing.Size(220, 23);
-        txtNewName.TabIndex = 5;
+        txtNewName.TabIndex = 1;
         // 
         // btnNewAddScore
         // 
         btnNewAddScore.Location = new System.Drawing.Point(214, 58);
         btnNewAddScore.Name = "btnNewAddScore";
         btnNewAddScore.Size = new System.Drawing.Size(98, 23);
-        btnNewAddScore.TabIndex = 6;
+        btnNewAddScore.TabIndex = 4;
         btnNewAddScore.Text = "&Add Score";
         btnNewAddScore.UseVisualStyleBackColor = true;
         btnNewAddScore.Click += btnNewAddScore_Click;
@@ -114,7 +115,7 @@ partial class AddNewStudent
         btnNewCancel.Location = new System.Drawing.Point(214, 176);
         btnNewCancel.Name = "btnNewCancel";
         btnNewCancel.Size = new System.Drawing.Size(98, 23);
-        btnNewCancel.TabIndex = 8;
+        btnNewCancel.TabIndex = 9;
         btnNewCancel.Text = "&Cancel";
         btnNewCancel.UseVisualStyleBackColor = true;
         btnNewCancel.Click += btnNewCancel_Click;
@@ -124,7 +125,7 @@ partial class AddNewStudent
         btnNewOk.Location = new System.Drawing.Point(110, 176);
         btnNewOk.Name = "btnNewOk";
         btnNewOk.Size = new System.Drawing.Size(98, 23);
-        btnNewOk.TabIndex = 9;
+        btnNewOk.TabIndex = 8;
         btnNewOk.Text = "&Ok";
         btnNewOk.UseVisualStyleBackColor = true;
         btnNewOk.Click += btnNewOk_Click;

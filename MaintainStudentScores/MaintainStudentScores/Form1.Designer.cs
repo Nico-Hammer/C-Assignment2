@@ -66,7 +66,7 @@ partial class Form1
         btnDeleteStudent.Location = new System.Drawing.Point(294, 90);
         btnDeleteStudent.Name = "btnDeleteStudent";
         btnDeleteStudent.Size = new System.Drawing.Size(75, 23);
-        btnDeleteStudent.TabIndex = 3;
+        btnDeleteStudent.TabIndex = 4;
         btnDeleteStudent.Text = "&Delete";
         btnDeleteStudent.UseVisualStyleBackColor = true;
         btnDeleteStudent.Click += btnDeleteStudent_Click;
@@ -76,7 +76,7 @@ partial class Form1
         btnUpdateStudent.Location = new System.Drawing.Point(294, 63);
         btnUpdateStudent.Name = "btnUpdateStudent";
         btnUpdateStudent.Size = new System.Drawing.Size(75, 23);
-        btnUpdateStudent.TabIndex = 4;
+        btnUpdateStudent.TabIndex = 3;
         btnUpdateStudent.Text = "&Update";
         btnUpdateStudent.UseVisualStyleBackColor = true;
         btnUpdateStudent.Click += btnUpdateStudent_Click;
@@ -97,14 +97,15 @@ partial class Form1
         txtStudentAVG.Name = "txtStudentAVG";
         txtStudentAVG.ReadOnly = true;
         txtStudentAVG.Size = new System.Drawing.Size(57, 23);
-        txtStudentAVG.TabIndex = 6;
+        txtStudentAVG.TabIndex = 11;
+        txtStudentAVG.TabStop = false;
         // 
         // lblAverage
         // 
         lblAverage.Location = new System.Drawing.Point(150, 189);
         lblAverage.Name = "lblAverage";
         lblAverage.Size = new System.Drawing.Size(64, 23);
-        lblAverage.TabIndex = 7;
+        lblAverage.TabIndex = 10;
         lblAverage.Text = "Average:";
         // 
         // txtCount
@@ -113,14 +114,15 @@ partial class Form1
         txtCount.Name = "txtCount";
         txtCount.ReadOnly = true;
         txtCount.Size = new System.Drawing.Size(57, 23);
-        txtCount.TabIndex = 8;
+        txtCount.TabIndex = 9;
+        txtCount.TabStop = false;
         // 
         // lblCount
         // 
         lblCount.Location = new System.Drawing.Point(135, 160);
         lblCount.Name = "lblCount";
         lblCount.Size = new System.Drawing.Size(79, 23);
-        lblCount.TabIndex = 9;
+        lblCount.TabIndex = 8;
         lblCount.Text = "Score Count:";
         // 
         // txtScoreTotal
@@ -129,14 +131,15 @@ partial class Form1
         txtScoreTotal.Name = "txtScoreTotal";
         txtScoreTotal.ReadOnly = true;
         txtScoreTotal.Size = new System.Drawing.Size(57, 23);
-        txtScoreTotal.TabIndex = 10;
+        txtScoreTotal.TabIndex = 7;
+        txtScoreTotal.TabStop = false;
         // 
         // lblTotal
         // 
         lblTotal.Location = new System.Drawing.Point(135, 131);
         lblTotal.Name = "lblTotal";
         lblTotal.Size = new System.Drawing.Size(79, 23);
-        lblTotal.TabIndex = 11;
+        lblTotal.TabIndex = 6;
         lblTotal.Text = "Score Total:";
         // 
         // lstStudents
@@ -145,7 +148,7 @@ partial class Form1
         lstStudents.Location = new System.Drawing.Point(13, 34);
         lstStudents.Name = "lstStudents";
         lstStudents.Size = new System.Drawing.Size(264, 79);
-        lstStudents.TabIndex = 12;
+        lstStudents.TabIndex = 1;
         lstStudents.SelectedIndexChanged += lstStudents_SelectedIndexChanged;
         // 
         // Form1
