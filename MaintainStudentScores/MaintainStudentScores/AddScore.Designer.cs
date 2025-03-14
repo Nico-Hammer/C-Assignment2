@@ -32,7 +32,7 @@ partial class AddScore
     private void InitializeComponent()
     {
         lblAddScore = new System.Windows.Forms.Label();
-        btnAddaddscore = new System.Windows.Forms.Button();
+        btnAddScore = new System.Windows.Forms.Button();
         btnAddCancel = new System.Windows.Forms.Button();
         txtAddscore = new System.Windows.Forms.TextBox();
         SuspendLayout();
@@ -45,15 +45,15 @@ partial class AddScore
         lblAddScore.TabIndex = 0;
         lblAddScore.Text = "Score:";
         // 
-        // btnAddaddscore
+        // btnAddScore
         // 
-        btnAddaddscore.Location = new System.Drawing.Point(32, 47);
-        btnAddaddscore.Name = "btnAddaddscore";
-        btnAddaddscore.Size = new System.Drawing.Size(75, 23);
-        btnAddaddscore.TabIndex = 1;
-        btnAddaddscore.Text = "&Add";
-        btnAddaddscore.UseVisualStyleBackColor = true;
-        btnAddaddscore.Click += btnAddaddscore_Click;
+        btnAddScore.Location = new System.Drawing.Point(32, 47);
+        btnAddScore.Name = "btnAddScore";
+        btnAddScore.Size = new System.Drawing.Size(75, 23);
+        btnAddScore.TabIndex = 1;
+        btnAddScore.Text = "&Add";
+        btnAddScore.UseVisualStyleBackColor = true;
+        btnAddScore.Click += btnAddScore_Click;
         // 
         // btnAddCancel
         // 
@@ -79,7 +79,7 @@ partial class AddScore
         ClientSize = new System.Drawing.Size(217, 91);
         Controls.Add(txtAddscore);
         Controls.Add(btnAddCancel);
-        Controls.Add(btnAddaddscore);
+        Controls.Add(btnAddScore);
         Controls.Add(lblAddScore);
         Text = "AddScore";
         ResumeLayout(false);
@@ -87,7 +87,7 @@ partial class AddScore
     }
 
     private System.Windows.Forms.Label lblAddScore;
-    private System.Windows.Forms.Button btnAddaddscore;
+    private System.Windows.Forms.Button btnAddScore;
     private System.Windows.Forms.Button btnAddCancel;
     private System.Windows.Forms.TextBox txtAddscore;
 
