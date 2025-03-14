@@ -117,10 +117,12 @@ public partial class Form1 : Form
                 .Skip(1) // skip 1st part, in this case the name
                 .Where(s => !string.IsNullOrWhiteSpace(s)) // only care about the characters that aren't whitespace or null
                 .Select(decimal.Parse).ToList(); // make sure the score is a number then add it to a list
-        
-            txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString(); // print the sum of the selected students scores to the ScoreTotal textbox rounded to 2 places
-            txtCount.Text = scores.Count.ToString(); // print the selected students score count to the Count textbox
-            txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString(); // print the selected students average score to the StudentAVG textbox rounded to 2 places
+            if (scores.Any())
+            {
+                txtStudentAVG.Text = Math.Round(scores.Average(), 2).ToString(); // print the selected students average score to the StudentAVG textbox rounded to 2 places
+                txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString(); // print the sum of the selected students scores to the ScoreTotal textbox rounded to 2 places
+                txtCount.Text = scores.Count.ToString(); // print the selected students score count to the Count textbox
+            }
         }
         /* if no student is selected or the selected student is deleted clear all the score information textboxes */
         else
