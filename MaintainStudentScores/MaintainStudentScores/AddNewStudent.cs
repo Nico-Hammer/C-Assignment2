@@ -35,7 +35,7 @@ public partial class AddNewStudent : Form
         string lastName = string.Join(" ", nameParts.Skip(1)); // join the firstname with the last name, skipping over the first name since we already have it
         
         /* make sure that the names entered are valid alphabet characters */
-        if (!Regex.IsMatch(firstName, @"^[a-zA-Z]+$") || Regex.IsMatch(lastName, @"^[a-zA-Z]+$"))
+        if (!Regex.IsMatch(firstName, @"^[a-zA-Z]+$") || Regex.IsMatch(lastName, @"^[A-Za-z]+\s?,[A-Za-z]+$"))
         {
             MessageBox.Show("Name must contain only letters","Name Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return; // return to form so that the invalid student object isnt added to the list
