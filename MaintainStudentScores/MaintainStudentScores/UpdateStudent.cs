@@ -24,31 +24,31 @@ public partial class UpdateStudent : Form
     
     private void btnUpdateCancel_Click(object sender, EventArgs e)
     {
-        this.Close();
+        Close();
     }
 
     private void btnUpdateAdd_Click(object sender, EventArgs e)
     {
         AddScore addScore = new AddScore();
-        if (addScore.ShowDialog() == DialogResult.OK)
-        {
-            selectedStudent.score.Add(decimal.Parse(addScore.AddStudentScore));
-            lstUpdateScores.Items.Add(addScore.AddStudentScore);
-        }
+        if (addScore.ShowDialog() != DialogResult.OK) return;
+        selectedStudent.score.Add(decimal.Parse(addScore.AddStudentScore));
+        lstUpdateScores.Items.Add(addScore.AddStudentScore);
     }
 
-    private void btnUpdateupdate_Click(object sender, EventArgs e)
+    private void btnUpdateScore_Click(object sender, EventArgs e)
     {
-        // get the selected score from  the list
-        string selectedScore = lstUpdateScores.SelectedItem.ToString();
-        // pass the selected value to the UpdateScore Form
-        UpdateScore updateScoreForm = new UpdateScore(selectedScore);
-        
-        // after clicking ok button on the UpdateScore form,
-        // the selected score will now have the new updatedScore from the UpdateScore Form
-        if (updateScoreForm.ShowDialog() == DialogResult.OK)
+        if (lstUpdateScores.SelectedIndex != -1) // check that the selected score is in the list i.e. exists
         {
-            lstUpdateScores.Items[lstUpdateScores.SelectedIndex] = updateScoreForm.UpdatedStudentScore;
+            string selectedScore = lstUpdateScores.SelectedItem.ToString();
+            UpdateScore updateScoreForm = new UpdateScore(selectedScore); 
+                if (updateScoreForm.ShowDialog() == DialogResult.OK) 
+                { 
+                    lstUpdateScores.Items[lstUpdateScores.SelectedIndex] = updateScoreForm.UpdatedStudentScore; 
+                }
+        }
+        else
+        {
+            RenderMessage("update");
         }
     }
 
@@ -64,14 +64,15 @@ public partial class UpdateStudent : Form
         /* if no score is selected or the selected score is deleted show a messagebox informing to select a score */
         else
         {
-            MessageBox.Show("Select a score to delete");
+            RenderMessage("delete");
         }
     }
 
+    // function that clears all scores from the listbox component
     private void btnUpdateClear_Click(object sender, EventArgs e)
     {
-        lstUpdateScores.Items.Clear(); //clear all scores in the list
-        selectedStudent.score = new List<decimal>();
+        lstUpdateScores.Items.Clear(); //clear all scores in the listBox component
+        selectedStudent.score.Clear(); // clear all scores from the selectedStudent object
     }
 
     private void btnUpdateOk_Click(object sender, EventArgs e)
@@ -79,5 +80,13 @@ public partial class UpdateStudent : Form
         selectedStudent = new Student(selectedStudent.firstName, selectedStudent.lastName, selectedStudent.score);
         DialogResult = DialogResult.OK;
         Close();
+    }
+    
+    private static void RenderMessage(string action)
+    {
+        MessageBox.Show($"Select a score to {action}.", 
+            "Score not selected", 
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
     }
 }

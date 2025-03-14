@@ -36,7 +36,7 @@ partial class UpdateStudent
         lblUpdateScores = new System.Windows.Forms.Label();
         lstUpdateScores = new System.Windows.Forms.ListBox();
         btnUpdateAdd = new System.Windows.Forms.Button();
-        btnUpdateupdate = new System.Windows.Forms.Button();
+        btnUpdateScore = new System.Windows.Forms.Button();
         btnUpdateRemove = new System.Windows.Forms.Button();
         btnUpdateClear = new System.Windows.Forms.Button();
         btnUpdateCancel = new System.Windows.Forms.Button();
@@ -85,15 +85,15 @@ partial class UpdateStudent
         btnUpdateAdd.UseVisualStyleBackColor = true;
         btnUpdateAdd.Click += btnUpdateAdd_Click;
         // 
-        // btnUpdateupdate
+        // btnUpdateScore
         // 
-        btnUpdateupdate.Location = new System.Drawing.Point(290, 90);
-        btnUpdateupdate.Name = "btnUpdateupdate";
-        btnUpdateupdate.Size = new System.Drawing.Size(99, 23);
-        btnUpdateupdate.TabIndex = 5;
-        btnUpdateupdate.Text = "&Update";
-        btnUpdateupdate.UseVisualStyleBackColor = true;
-        btnUpdateupdate.Click += btnUpdateupdate_Click;
+        btnUpdateScore.Location = new System.Drawing.Point(290, 90);
+        btnUpdateScore.Name = "btnUpdateScore";
+        btnUpdateScore.Size = new System.Drawing.Size(99, 23);
+        btnUpdateScore.TabIndex = 5;
+        btnUpdateScore.Text = "&Update";
+        btnUpdateScore.UseVisualStyleBackColor = true;
+        btnUpdateScore.Click += btnUpdateScore_Click;
         // 
         // btnUpdateRemove
         // 
@@ -144,7 +144,7 @@ partial class UpdateStudent
         Controls.Add(btnUpdateCancel);
         Controls.Add(btnUpdateClear);
         Controls.Add(btnUpdateRemove);
-        Controls.Add(btnUpdateupdate);
+        Controls.Add(btnUpdateScore);
         Controls.Add(btnUpdateAdd);
         Controls.Add(lstUpdateScores);
         Controls.Add(lblUpdateScores);
@@ -155,7 +155,7 @@ partial class UpdateStudent
         PerformLayout();
     }
 
-    private System.Windows.Forms.Button btnUpdateupdate;
+    private System.Windows.Forms.Button btnUpdateScore;
     private System.Windows.Forms.Button btnUpdateRemove;
     private System.Windows.Forms.Button btnUpdateClear;
     private System.Windows.Forms.Button btnUpdateCancel;
