@@ -2,7 +2,8 @@
 
 public partial class UpdateStudent : Form
 {
-    private Student selectedStudent;
+    private Student selectedStudent { get; set;  }
+
     public UpdateStudent(Student student)
     {
         InitializeComponent();
@@ -31,15 +32,20 @@ public partial class UpdateStudent : Form
         AddScore addScore = new AddScore();
         if (addScore.ShowDialog() == DialogResult.OK)
         {
+            selectedStudent.score.Add(decimal.Parse(addScore.AddStudentScore));
             lstUpdateScores.Items.Add(addScore.AddStudentScore);
         }
     }
 
     private void btnUpdateupdate_Click(object sender, EventArgs e)
     {
+        // get the selected score from  the list
         string selectedScore = lstUpdateScores.SelectedItem.ToString();
+        // pass the selected value to the UpdateScore Form
         UpdateScore updateScoreForm = new UpdateScore(selectedScore);
         
+        // after clicking ok button on the UpdateScore form,
+        // the selected score will now have the new updatedScore from the UpdateScore Form
         if (updateScoreForm.ShowDialog() == DialogResult.OK)
         {
             lstUpdateScores.Items[lstUpdateScores.SelectedIndex] = updateScoreForm.UpdatedStudentScore;
@@ -60,5 +66,18 @@ public partial class UpdateStudent : Form
         {
             MessageBox.Show("Select a score to delete");
         }
+    }
+
+    private void btnUpdateClear_Click(object sender, EventArgs e)
+    {
+        lstUpdateScores.Items.Clear(); //clear all scores in the list
+        selectedStudent.score = new List<decimal>();
+    }
+
+    private void btnUpdateOk_Click(object sender, EventArgs e)
+    {
+        selectedStudent = new Student(selectedStudent.firstName, selectedStudent.lastName, selectedStudent.score);
+        DialogResult = DialogResult.OK;
+        Close();
     }
 }

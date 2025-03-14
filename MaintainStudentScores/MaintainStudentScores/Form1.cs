@@ -19,6 +19,7 @@ public partial class Form1 : Form
     /* function that takes a student object as an argument and prints all the students to the listbox */
     private void PrintStudents(List<Student> students)
     {
+        lstStudents.Items.Clear();
         /* loop through every student in the list */
         foreach (Student s in students)
         {
@@ -80,6 +81,10 @@ public partial class Form1 : Form
     
         UpdateStudent updateStudent = new UpdateStudent(studentToUpdate);
         updateStudent.ShowDialog();
+        int index = lstStudents.SelectedIndex;
+        students.RemoveAt(index);
+        students.Insert(index,studentToUpdate);
+        PrintStudents(students);
     }
     
     private void btnDeleteStudent_Click(object sender, EventArgs e)

@@ -113,6 +113,7 @@ partial class UpdateStudent
         btnUpdateClear.TabIndex = 7;
         btnUpdateClear.Text = "Clear &Scores";
         btnUpdateClear.UseVisualStyleBackColor = true;
+        btnUpdateClear.Click += btnUpdateClear_Click;
         // 
         // btnUpdateCancel
         // 
@@ -132,6 +133,7 @@ partial class UpdateStudent
         btnUpdateOk.TabIndex = 9;
         btnUpdateOk.Text = "&Ok";
         btnUpdateOk.UseVisualStyleBackColor = true;
+        btnUpdateOk.Click += btnUpdateOk_Click;
         // 
         // UpdateStudent
         // 
