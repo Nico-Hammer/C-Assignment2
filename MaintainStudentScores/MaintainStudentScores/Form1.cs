@@ -53,8 +53,10 @@ public partial class Form1 : Form
         }
     }
     
+    // function that updates the Studen
     private void btnUpdateStudent_Click(object sender, EventArgs e)
     {
+        // message that is displayed if click in the update button without selecting a student
         if (lstStudents.SelectedIndex == -1)
         {
             MessageBox.Show("Please select a student to update.", 
@@ -63,28 +65,36 @@ public partial class Form1 : Form
             return;
         }
         
+        // store all the information from the selected student
         string selectedStudent = lstStudents.SelectedItem.ToString();
-        var parts = selectedStudent.Split("|");
+        var parts = selectedStudent.Split("|"); // split the information by using the | as separator
 
         if (parts.Length < 2) return;
 
-        string[] nameParts = parts[0].Split(" ");
-        string firstName = nameParts[0];
-        string lastName = nameParts[1];
+        string[] nameParts = parts[0].Split(" "); // split the name into first name and last name using a blank space as separator
+        string firstName = nameParts[0]; // nameParts[0] is stored in the first name
+        string lastName = nameParts[1]; // nameParts[1] is stored in the last name
     
+        // linq function to get all scores that a student has, skipping par 1 that is the name of the student
         var scores = parts.Skip(1)
             .Where(s => !string.IsNullOrWhiteSpace(s))
             .Select(decimal.Parse)
             .ToList();
 
+        // creating a new instance of the student object
         Student studentToUpdate = new Student(firstName, lastName, scores);
-    
+        //passing the instance of the object to the UpdateStudent form
         UpdateStudent updateStudent = new UpdateStudent(studentToUpdate);
-        updateStudent.ShowDialog();
-        int index = lstStudents.SelectedIndex;
-        students.RemoveAt(index);
-        students.Insert(index,studentToUpdate);
-        PrintStudents(students);
+        updateStudent.ShowDialog(); // open the UpdateStudent form
+        int index = lstStudents.SelectedIndex; // get the index of the selected item in the listBox
+        students.RemoveAt(index); // we remove the out of date student based on the index
+        students.Insert(index,studentToUpdate); // and replace it with the new information
+        PrintStudents(students); // print the student list with the new information
+        // clearing all the fields after updating the student since the selected item is no longer selected
+        txtCount.Clear();
+        txtScoreTotal.Clear();
+        txtStudentAVG.Clear();
+        
     }
     
     private void btnDeleteStudent_Click(object sender, EventArgs e)
