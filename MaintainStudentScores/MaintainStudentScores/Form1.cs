@@ -123,6 +123,13 @@ public partial class Form1 : Form
                 txtScoreTotal.Text = Math.Round(scores.Sum(), 2).ToString(); // print the sum of the selected students scores to the ScoreTotal textbox rounded to 2 places
                 txtCount.Text = scores.Count.ToString(); // print the selected students score count to the Count textbox
             }
+            /* clear the score information textboxes if the student has no scores */
+            else if (!scores.Any())
+            {
+                txtCount.Clear();
+                txtScoreTotal.Clear();
+                txtStudentAVG.Clear();
+            }
         }
         /* if no student is selected or the selected student is deleted clear all the score information textboxes */
         else
