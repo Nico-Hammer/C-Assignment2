@@ -85,8 +85,9 @@ public partial class Form1 : Form
         Student studentToUpdate = new Student(firstName, lastName, scores);
         //passing the instance of the object to the UpdateStudent form
         UpdateStudent updateStudent = new UpdateStudent(studentToUpdate);
-        updateStudent.ShowDialog(); // open the UpdateStudent form
         int index = lstStudents.SelectedIndex; // get the index of the selected item in the listBox
+        // if the result of the form is different from OK, this will prevent any changes to be saved if the "Cancel" button is clicked.
+        if (updateStudent.ShowDialog() != DialogResult.OK) return;
         students.RemoveAt(index); // we remove the out of date student based on the index
         students.Insert(index,studentToUpdate); // and replace it with the new information
         PrintStudents(students); // print the student list with the new information
@@ -109,7 +110,9 @@ public partial class Form1 : Form
         /* if no student is selected or the selected student is deleted show a messagebox informing to select a student */
         else
         {
-            MessageBox.Show("Select a student to delete");
+            MessageBox.Show("Please select a student to delete.", 
+                "Student not selected",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
     
